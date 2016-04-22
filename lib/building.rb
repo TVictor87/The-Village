@@ -5,6 +5,8 @@ class Building
     (@@building_count += 1).to_s
   end
 
+  attr_reader :size, :type, :name, :influence
+
   COLORIZE_BUILDINGS = false
 
   SIZES = {

@@ -9,8 +9,7 @@ describe Building do
   end
 
   it "get right information from building" do
-    building = Building.new
-    building.info.should == "       Building 2: Size: Small home | Type: Living Home | Influence: small\n"
+    building = Building.new(name: 'Building 1')
+    building.info.should == "       Building 1: Size: Small home | Type: Living Home | Influence: small\n"
   end
-
 end

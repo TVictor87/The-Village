@@ -15,7 +15,7 @@ class ConsoleInput
             found_buildings = Infrastructure::BUILDING_GROUPS.select {|key, curr_b| curr_b[:id] == building_id }
             unless found_buildings.empty?
               current_village.infrastructure.build(type: found_buildings.values[0][:building_types][0])
-              p "Building of #{found_buildings.values[0][:building_types][0]}"
+              printf "Building of #{found_buildings.values[0][:building_types][0]}\n"
             end
 
           when /d/
